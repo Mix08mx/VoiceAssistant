@@ -65,9 +65,12 @@ def main():
                 tts.say('Light powered on')
             elif 'apaga la luz' in text:
                 board.led.state = Led.OFF
+                tts.say('Light powered off')
             elif 'parpadea' in text:
                 board.led.state = Led.BLINK
+                tts.say('Light is blinking')
             elif 'hasta luego' in text:
+                tts.say('Shutting down now')
                 break
 
 if __name__ == '__main__':
